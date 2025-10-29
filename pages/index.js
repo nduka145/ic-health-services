@@ -6,23 +6,45 @@ export default function Home() {
     <>
       <Head>
         <title>IC Health Services</title>
-        <meta name="description" content="Mental and Behavioral Health Services in Owings Mills, MD" />
+        <meta
+          name="description"
+          content="Mental and Behavioral Health Services in Owings Mills, MD"
+        />
       </Head>
 
       {/* Navbar */}
       <header className="bg-white shadow-sm fixed top-0 left-0 w-full z-50">
         <nav className="max-w-6xl mx-auto flex justify-between items-center p-4">
           <div className="flex items-center gap-2">
-            <Image src="/logo.png" alt="IC Health Logo" width={120} height={40} />
+            <Image
+              src="/logo.png"
+              alt="IC Health Logo"
+              width={120}
+              height={40}
+            />
           </div>
           <ul className="flex gap-6 text-sm font-medium">
-            <li><a href="#home" className="text-blue-700">Home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#reviews">Reviews</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li>
+              <a href="#home" className="text-blue-700">
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="#services">Services</a>
+            </li>
+            <li>
+              <a href="#reviews">Reviews</a>
+            </li>
+            <li>
+              <a href="#gallery">Gallery</a>
+            </li>
+            <li>
+              <a href="#contact">Contact</a>
+            </li>
           </ul>
-          <a href="tel:4436203616" className="text-blue-700 font-semibold">(443) 620-3616</a>
+          <a href="tel:4436203616" className="text-blue-700 font-semibold">
+            (443) 620-3616
+          </a>
         </nav>
       </header>
 
@@ -38,18 +60,28 @@ export default function Home() {
       </section>
 
       {/* Services */}
-      <section id="services" className="max-w-6xl mx-auto py-16 text-center">
-        <h2 className="text-2xl font-bold mb-10">Our Services</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+      <section id="services" className="max-w-7xl mx-auto py-16 text-center px-6">
+        <h2 className="text-3xl font-bold mb-10">Our Services</h2>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 justify-items-center">
           {[
             { name: "Mental Health Services", img: "/service1.jpg" },
             { name: "Medication Management", img: "/service2.jpg" },
             { name: "Psychiatric Evaluation", img: "/service3.jpg" },
             { name: "Telepsych", img: "/service4.jpg" },
           ].map((s) => (
-            <div key={s.name} className="bg-white rounded-xl shadow-md p-4">
-              <Image src={s.img} alt={s.name} width={300} height={200} className="rounded-md" />
-              <h3 className="mt-3 font-semibold">{s.name}</h3>
+            <div
+              key={s.name}
+              className="flex flex-col items-center bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-200 w-full max-w-[260px]"
+            >
+              <div className="w-full h-48 overflow-hidden rounded-md">
+                <img
+                  src={s.img}
+                  alt={s.name}
+                  className="w-full h-full object-cover rounded-md"
+                />
+              </div>
+              <h3 className="mt-4 font-semibold text-lg">{s.name}</h3>
             </div>
           ))}
         </div>
@@ -58,11 +90,13 @@ export default function Home() {
       {/* About */}
       <section className="bg-gray-50 py-12">
         <div className="max-w-4xl mx-auto text-center px-4">
-          <h3 className="text-2xl font-bold mb-4">Welcome to IC Health Services</h3>
+          <h3 className="text-2xl font-bold mb-4">
+            Welcome to IC Health Services
+          </h3>
           <p className="text-gray-700 leading-relaxed">
-            IC Health Services provides mental and behavioral health care in Owings Mills, MD.
-            Our goal is to promote total well-being through compassionate, individualized, and
-            culturally competent care.
+            IC Health Services provides mental and behavioral health care in
+            Owings Mills, MD. Our goal is to promote total well-being through
+            compassionate, individualized, and culturally competent care.
           </p>
         </div>
       </section>
@@ -72,7 +106,9 @@ export default function Home() {
         <p className="font-semibold">IC Health Services</p>
         <p>110 Painters Mill Rd Suite 105, Owings Mills, MD 21117</p>
         <p className="mt-2">Call us: (443) 620-3616</p>
-        <p className="mt-4 text-sm">© 2025 IC Health Services. All Rights Reserved.</p>
+        <p className="mt-4 text-sm">
+          © 2025 IC Health Services. All Rights Reserved.
+        </p>
       </footer>
     </>
   );
