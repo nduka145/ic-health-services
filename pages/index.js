@@ -60,29 +60,27 @@ export default function Home() {
       </section>
 
 {/* Services */}
-<section id="services" className="max-w-6xl mx-auto py-16 text-center">
-  <div className="flex flex-col items-center">
-    <h2 className="text-2xl font-bold mb-10">Our Services</h2>
+<section id="services" className="max-w-7xl mx-auto py-16 text-center px-6">
+  <h2 className="text-3xl font-bold mb-10">Our Services</h2>
 
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 justify-items-center">
-      {[
-        { name: "Mental Health Services", img: "/service1.jpg" },
-        { name: "Medication Management", img: "/service2.jpg" },
-        { name: "Psychiatric Evaluation", img: "/service3.jpg" },
-        { name: "Telepsych", img: "/service4.jpg" },
-      ].map((s) => (
-        <div key={s.name} className="flex flex-col items-center">
-          <h3 className="font-bold mb-3">{s.name}</h3>
-          <div className="w-[240px] h-[160px] overflow-hidden rounded-md">
-            <img
-              src={s.img}
-              alt={s.name}
-              className="w-full h-full object-cover rounded-md"
-            />
-          </div>
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 justify-items-center">
+    {[
+      { name: "Mental Health Services", img: "/service1.jpg" },
+      { name: "Medication Management", img: "/service2.jpg" },
+      { name: "Psychiatric Evaluation", img: "/service3.jpg" },
+      { name: "Telepsych", img: "/service4.jpg" },
+    ].map((s) => (
+      <div key={s.name} className="flex flex-col items-center">
+        <h3 className="font-extrabold mb-3 text-lg">{s.name}</h3>
+        <div className="w-[250px] h-[160px] overflow-hidden rounded-md">
+          <img
+            src={s.img}
+            alt={s.name}
+            className="w-full h-full object-cover rounded-md"
+          />
         </div>
-      ))}
-    </div>
+      </div>
+    ))}
   </div>
 </section>
 
