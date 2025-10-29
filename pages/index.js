@@ -72,7 +72,7 @@ export default function Home() {
     ].map((s) => (
       <div key={s.name} className="flex flex-col items-center">
         <h3 className="font-extrabold mb-3 text-lg">{s.name}</h3>
-        <div className="w-[250px] h-[160px] overflow-hidden rounded-md">
+        <div className="w-[125px] h-[80px] overflow-hidden rounded-md">
           <img
             src={s.img}
             alt={s.name}
@@ -83,6 +83,7 @@ export default function Home() {
     ))}
   </div>
 </section>
+
 
       {/* About */}
       <section className="bg-gray-50 py-12">
