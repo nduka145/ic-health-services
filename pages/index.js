@@ -65,7 +65,7 @@ export default function Home() {
 
   <div className="flex justify-center items-start gap-14 flex-wrap">
     {[
-      { name: "Mental Health Services", img: "/service1.jpg" }, { name: "Medication Management", img: "/service2.jpg" },
+      { name: "Mental Health Services", img: "/service1.jpg", name: "Medication Management", img: "/service2.jpg" },
       { name: "Psychiatric Evaluation", img: "/service3.jpg" },
       { name: "Telepsych", img: "/service4.jpg" },
     ].map((s) => (
