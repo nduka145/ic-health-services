@@ -63,16 +63,19 @@ export default function Home() {
 <section id="services" className="container mx-auto px-4 py-12 lg:px-48 text-center">
   <h2 className="text-3xl font-bold mb-10">Our Services</h2>
 
-  <div className="grid grid-cols-1 place-items-center gap-6 md:grid-cols-4">
+  <div className="flex flex-wrap justify-center gap-8">
     {[
       { name: "Mental Health Services", img: "/service1.jpg" },
       { name: "Medication Management", img: "/service2.jpg" },
       { name: "Psychiatric Evaluation", img: "/service3.jpg" },
       { name: "Telepsych", img: "/service4.jpg" },
     ].map((s) => (
-      <div key={s.name} className="flex flex-col items-center text-center">
-        <h3 className="font-bold text-lg mb-3">{s.name}</h3>
-        <div className="w-[180px] h-[110px] overflow-hidden rounded-md">
+      <div
+        key={s.name}
+        className="flex flex-col items-center text-center max-w-[200px]"
+      >
+        <h3 className="font-bold text-lg mb-2">{s.name}</h3>
+        <div className="w-[160px] h-[100px] overflow-hidden rounded-md">
           <img
             src={s.img}
             alt={s.name}
