@@ -60,10 +60,10 @@ export default function Home() {
       </section>
 
 {/* Services */}
-<section id="services" className="container mx-auto px-4 py-12 lg:px-48 text-center">
+<section id="services" className="max-w-6xl mx-auto py-16 text-center">
   <h2 className="text-3xl font-bold mb-10">Our Services</h2>
 
-  <div className="flex flex-wrap justify-center gap-8">
+  <div className="flex justify-center items-start gap-14 flex-wrap">
     {[
       { name: "Mental Health Services", img: "/service1.jpg" },
       { name: "Medication Management", img: "/service2.jpg" },
@@ -72,10 +72,10 @@ export default function Home() {
     ].map((s) => (
       <div
         key={s.name}
-        className="flex flex-col items-center text-center max-w-[200px]"
+        className="flex flex-col items-center text-center"
       >
-        <h3 className="font-bold text-lg mb-2">{s.name}</h3>
-        <div className="w-[160px] h-[100px] overflow-hidden rounded-md">
+        <h3 className="font-extrabold mb-3 text-lg">{s.name}</h3>
+        <div className="w-[220px] h-[140px] overflow-hidden rounded-md">
           <img
             src={s.img}
             alt={s.name}
