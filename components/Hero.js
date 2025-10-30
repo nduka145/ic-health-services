@@ -9,7 +9,6 @@ export default function Hero() {
         width={1920}
         height={600}
         className="w-full h-[500px] object-cover"
-        priority
       />
     </section>
   );

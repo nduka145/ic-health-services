@@ -5,7 +5,7 @@ export default function Footer() {
       <p>110 Painters Mill Rd Suite 105, Owings Mills, MD 21117</p>
       <p className="mt-2">Call us: (443) 620-3616</p>
       <p className="mt-4 text-sm">
-        © {new Date().getFullYear()} IC Health Services. All Rights Reserved.
+        © 2025 IC Health Services. All Rights Reserved.
       </p>
     </footer>
   );
