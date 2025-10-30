@@ -1,98 +1,62 @@
-"use client";
-import React from "react";
-import {
-  Navbar,
-  NavbarBrand,
-  NavbarMenuToggle,
-  NavbarMenuItem,
-  NavbarMenu,
-  NavbarContent,
-  NavbarItem,
-  Link,
-  Button,
-} from "@nextui-org/react";
-
-import NextLink from "next/link";
 import Image from "next/image";
 
-export default function NavigationBar() {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
-
-  const menuItems = [
-    { name: "Home", link: "https://www.wheelsynctech.com"},
-    { name: "Culture & Vision", link: "/culture-and-vision" },
-    { name: "Who we are", link: "/who-we-are" },
-    { name: "What we do ", link: "/what-we-do" },
-    { name: "Careers", link: "/careers" },
-    { name: "Contact", link: "/contact" },
-  ];
-
+export default function Navbar() {
   return (
-    <Navbar isBordered isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen}>
-      <NavbarContent className="sm:hidden" justify="start">
-        <NavbarMenuToggle
-          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-        />
-      </NavbarContent>
+    <header className="bg-white shadow fixed w-full z-50">
+      <nav className="max-w-7xl mx-auto flex justify-between items-center px-8 py-3">
+        {/* Left: Logo */}
+        <div className="flex items-center gap-2">
+          <Image
+            src="/logo.png"
+            alt="IC Health Logo"
+            width={150}
+            height={50}
+            className="object-contain"
+          />
+        </div>
 
-      {/* <NavbarContent className="sm:hidden pr-3" justify="center">
-        <NavbarBrand>
-          <p className="font-bold text-inherit">Wheelsync Technology</p>
-        </NavbarBrand>
-      </NavbarContent> */}
-      <NavbarContent className="pr-3" justify="center">
-        <NavbarBrand>
-          <p className="font-bold text-inherit">
-            <Image src="/logo.svg" alt="Wheelsync Technology" width={180} height={180} objectPosition="left"/>
-            {/* <Link href="/" color="foreground">
-              Wheelsync Technology
-            </Link> */}
-          </p>
-        </NavbarBrand>
-      </NavbarContent>
+        {/* Center: Navigation Links */}
+        <ul className="flex gap-10 text-[15px] font-medium text-gray-800">
+          <li>
+            <a href="#home" className="hover:text-blue-600 transition">
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="#services" className="hover:text-blue-600 transition">
+              Services
+            </a>
+          </li>
+          <li>
+            <a href="#reviews" className="hover:text-blue-600 transition">
+              Reviews
+            </a>
+          </li>
+          <li>
+            <a href="#gallery" className="hover:text-blue-600 transition">
+              Gallery
+            </a>
+          </li>
+          <li>
+            <a href="#contact" className="hover:text-blue-600 transition">
+              Contact
+            </a>
+          </li>
+        </ul>
 
-      <NavbarContent
-        className="hidden gap-4 text-foreground sm:flex"
-        justify="center"
-      >
-        {/* <NavbarBrand>
-          <p className="font-bold text-inherit">Wheelsync Technology</p>
-        </NavbarBrand> */}
-        {menuItems.map((item, index) => (
-          <NavbarItem key={`${item}-${index}`}>
-            <NextLink href={item.link}>{item.name}</NextLink>
-          </NavbarItem>
-        ))}
-      </NavbarContent>
-
-      {/* <NavbarContent justify="end">
-        <NavbarItem className="hidden lg:flex">
-          <Link href="#">Login</Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Button as={Link} color="warning" href="#" variant="flat">
-            Sign Up
-          </Button>
-        </NavbarItem>
-      </NavbarContent> */}
-
-      <NavbarMenu>
-        {menuItems.map((item, index) => (
-          <NavbarMenuItem key={`${item}-${index}`}>
-            <Link
-              className="w-full"
-              href={item.link}
-              color="foreground"
-              size="lg"
-            >
-              {/* <NextLink href={item.link} replace={true}>
-              {item.name}
-            </NextLink> */}
-              {item.name}
-            </Link>
-          </NavbarMenuItem>
-        ))}
-      </NavbarMenu>
-    </Navbar>
+        {/* Right: Phone */}
+        <div className="flex items-center gap-3">
+          <a
+            href="tel:4436203616"
+            className="text-gray-800 font-semibold hover:text-blue-600 transition"
+          >
+            (443) 620-3616
+          </a>
+          <button className="bg-blue-600 text-white text-sm px-4 py-1.5 rounded hover:bg-blue-700 transition">
+            VIEW MAIN WEBSITE
+          </button>
+        </div>
+      </nav>
+    </header>
   );
 }
